@@ -44,7 +44,7 @@
 
       <a href="index.php"><h1>Orient'Info</h1></a>
 
-      <h2>Le site fait pour votre orientation</h2>
+      <a><h2>Le site fait pour votre orientation</h2></a>
 
       </section>
 

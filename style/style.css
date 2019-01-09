@@ -4,10 +4,57 @@ margin: 0;
 padding: 0;
 }
 
+/* HEADER */
+
 header nav .navigation{
 
-background-color: rgba(34, 186, 225, 0.51);
+background-color: rgba(34, 186, 225, 1);
 color: white;
 font-size: 30px;
 font-family: Raleway;
+}
+
+header nav ul{
+
+list-style: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+header nav li{
+
+margin: 0 25px;
+border-bottom: 3px solid rgba(34, 186, 225, 1);
+cursor: pointer;
+padding:7.5px 0;
+}
+
+header nav li:hover,
+header nav li:active,
+header nav li:focus{
+
+border-bottom: 3px solid #118cc4;
+color: #118cc4;
+}
+
+header {
+
+height: 100vh;
+}
+
+header nav ul{
+
+height: 55px;
+}
+
+header section{
+
+justify-content: center;
+display: flex;
+width: 100%;
+}
+
+header section a{
+width: 100%;
 }
