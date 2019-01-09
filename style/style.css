@@ -1,0 +1,13 @@
+*{
+
+margin: 0;
+padding: 0;
+}
+
+header nav .navigation{
+
+background-color: rgba(34, 186, 225, 0.51);
+color: white;
+font-size: 30px;
+font-family: Raleway;
+}

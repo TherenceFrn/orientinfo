@@ -8,6 +8,8 @@
 
     <title>Orient'Info</title>
 
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+
   </head>
 
   <body>
@@ -48,13 +50,47 @@
 
       </header>
 
+      </main>
+
       <section class="section section-2">
 
       <p>Orient'Info est un site qui vous permet de trouver des informations sur votre orientation</p>
 
-      <p>retrouvez ici des témoignages, des dates de porte-ouvertes ou des adresses sur les filières et écoles qui vous intéressent</p>
+      <p>Retrouvez ici des témoignages, des dates de porte-ouvertes ou des adresses sur les filières et écoles qui vous intéressent</p>
 
       </section>
+
+      </main>
+
+      <footer>
+
+        <ul class="footer">
+
+          <li class="footer-bouton">Orient'Info</li>
+
+          <li class="footer-bouton">Nous contacter</li>
+
+          <li class="footer-bouton">CGU</li>
+
+          <li class="footer-bouton">Réseaux Sociaux</li>
+
+          <li class="footer-bouton">
+
+          <ul><li>Twitter</li>
+
+          <li>Facebook</li>
+
+          <li>Instagram</li>
+
+          <li>LinkedIn</li>
+
+          </ul>
+
+          </li>
+
+        </ul>
+
+      </footer>
 
   </body>
 
