@@ -22,21 +22,21 @@
 
         <ul class="navigation">
 
-          <li class="navigation-bouton">Acceuil</li>
+          <li class="navigation-bouton"><a href="index.php">Acceuil</a></li>
 
-          <li class="navigation-bouton">Magazine</li>
+          <li class="navigation-bouton"><a href="magazine.php">Magazine</a></li>
 
-          <li class="navigation-bouton">Les Filières</li>
+          <li class="navigation-bouton"><a href="filiere.php">Les Filières</a></li>
 
-          <li class="navigation-bouton">Les Ecoles</li>
+          <li class="navigation-bouton"><a href="ecole.php">Les Ecoles</a></li>
 
-          <li class="navigation-bouton">Temoignages</li>
+          <li class="navigation-bouton"><a href="#temoignages.php">Temoignages</a></li>
 
-          <li class="navigation-bouton">Contact</li>
+          <li class="navigation-bouton"><a href="contact.php">Contact</a></li>
 
-          <li class="navigation-bouton">Etudes</li>
+          <li class="navigation-bouton"><a href="etude.php">Etudes</a></li>
 
-          <li class="navigation-bouton">Profil</li>
+          <li class="navigation-bouton"><a href="profil.php">Profil</a></li>
 
         </ul>
 
@@ -51,6 +51,8 @@
       <a href="index.php"><h1>Orient'Info</h1></a>
 
       <a><h2>Le site fait pour votre orientation</h2></a>
+
+      <a class="accez-mag" href="magazine.php">Accédez au magazine</a>
 
       </section>
 
