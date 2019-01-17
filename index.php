@@ -74,15 +74,17 @@
 
           <li class="footer-bouton">Réseaux Sociaux</li>
 
-          <li class="footer-bouton">
+          <li class="footer-bouto">
 
-          <ul><li>Twitter</li>
+          <ul class="reso-footer">
 
-          <li>Facebook</li>
+          <li><a href="#" id="reso-1">Twitter</a></li>
 
-          <li>Instagram</li>
+          <li><a href="#" id="reso-2">Facebook</a></li>
 
-          <li>LinkedIn</li>
+          <li><a href="#" id="reso-3">Instagram</a></li>
+
+          <li><a href="#" id="reso-4">LinkedIn</a></li>
 
           </ul>
 
