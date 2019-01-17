@@ -91,7 +91,7 @@ footer{
 
 background-color: rgb(190,190,190);
 color: white;
-padding: 50px 300px;
+padding: 25px 300px;
 font-size: 30px;
 }
 
@@ -169,7 +169,17 @@ footer .footer .reso-footer #reso-4:focus
 color: 	#0077B4;
 }
 
+/* COMMUN */
 
+.voirplus{
+
+width: 100%;
+text-align: center;
+font-size: 30px;
+cursor: pointer;
+color: #22BAE1;
+margin: 25px
+}
 
 /* MAIN INDEX.PHP*/
 
@@ -315,5 +325,57 @@ color: white;
 }
 
 #magazine main section div h2{
+padding: 3px 15px;
+}
+
+/* FILIERE . PHP */
+
+#filiere main{
+
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+#filiere .magazine-prem{
+
+margin-top: 100px;
+}
+#filiere main section{
+
+height: 150px;
+width: 1200px;
+background-image : url('../content/images/fac2.jpg');
+border-top-left-radius: 0px;
+border-top-right-radius: 35px;
+border-bottom-left-radius: 35px;
+border-bottom-right-radius: 0px;
+background-size: cover;
+position: relative;
+margin: 25px 50px;
+transition: .2s ease;
+cursor: pointer;
+}
+
+#filiere main section:hover,
+#filiere main section:focus,
+#filiere main section:active{
+
+box-shadow: 0 0 20px rgba(34, 186, 225, 1);
+}
+
+
+#filiere main section div{
+background-color: rgba(34, 186, 225, 1);
+bottom: 40px;
+position: absolute;
+font-size: 35px;
+border-radius: 35px;
+border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;
+color: white;
+}
+
+#filiere main section div h2{
 padding: 3px 15px;
 }
