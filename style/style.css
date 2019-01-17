@@ -25,6 +25,11 @@ font-size: 30px;
 
 /* HEADER */
 
+header{
+position: fixed;
+width: 100%;
+}
+
 header nav .navigation{
 
 background-color: rgba(34, 186, 225, 1);
@@ -74,84 +79,6 @@ width: 100%;
 header section a{
 width: 100%;
 }
-
-
-
-/* MAIN */
-
-
-main {
-
-
-}
-
-main .section-1{
-
-text-align: center;
-padding: 175px 0;
-padding-bottom: 325px;
-}
-
-
-main .section-1 h1{
-
-color: #22BAE1;
-font-size: 200px;
-font-weight: bold;
-}
-
-
-main .section-1 h2{
-
-color: #2d2d2d;
-font-size: 86px;
-font-weight: bold;
-}
-
-main .section-2{
-
-margin: 50px 75px;
-border: 3px solid black;
-border-radius: 36px;
-padding: 50px;
-font-size: 70px;
-}
-
-main .section-2 .acceuil-abo-bouton{
-margin-top: 25px;
-display: flex;
-justify-content: space-around;
-}
-
-main .section-2 a{
-
-color: #2d2d2d;
-background-color: #22BAE1;
-border-radius: 50px;
-font-size: 50px;
-padding: 10px;
-transition: .4s ease;
-}
-
-main .section-2 a:hover,
-main .section-2 a:active,
-main .section-2 a:focus
-{
-
-color: white;
-background-color: #22BAE1;
-border-radius: 50px;
-font-size: 50px;
-padding: 10px;
-}
-
-
-
-
-
-
-
-
 
 
 /* FOOTER */
@@ -238,3 +165,71 @@ footer .footer .reso-footer #reso-4:focus
 
 color: 	#0077B4;
 }
+
+
+
+/* MAIN INDEX.PHP*/
+
+
+#index main .section-1{
+
+text-align: center;
+padding: 175px 0;
+padding-bottom: 325px;
+}
+
+
+#index main .section-1 h1{
+
+color: #22BAE1;
+font-size: 200px;
+font-weight: bold;
+}
+
+
+#index main .section-1 h2{
+
+color: #2d2d2d;
+font-size: 86px;
+font-weight: bold;
+}
+
+#index main .section-2{
+
+margin: 50px 75px;
+border: 3px solid black;
+border-radius: 36px;
+padding: 50px;
+font-size: 70px;
+}
+
+#index main .section-2 .acceuil-abo-bouton{
+margin-top: 25px;
+display: flex;
+justify-content: space-around;
+}
+
+#index main .section-2 a{
+
+color: #2d2d2d;
+background-color: #22BAE1;
+border-radius: 50px;
+font-size: 50px;
+padding: 10px;
+transition: .4s ease;
+}
+
+#index main .section-2 a:hover,
+#index main .section-2 a:active,
+#index main .section-2 a:focus
+{
+
+color: white;
+background-color: #22BAE1;
+border-radius: 50px;
+font-size: 50px;
+padding: 10px;
+}
+
+
+/* MAGAZINE .PHP */

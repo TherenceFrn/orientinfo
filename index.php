@@ -14,6 +14,8 @@
 
   <body>
 
+    <div id="index">
+
       <header class="header">
 
       <nav>
@@ -98,6 +100,8 @@
         </ul>
 
       </footer>
+
+    </div>
 
   </body>
 
