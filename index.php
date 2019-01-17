@@ -40,6 +40,10 @@
 
       </nav>
 
+      </header>
+
+      <main>
+
       <section class="section section-1">
 
       <a href="index.php"><h1>Orient'Info</h1></a>
@@ -47,10 +51,6 @@
       <a><h2>Le site fait pour votre orientation</h2></a>
 
       </section>
-
-      </header>
-
-      </main>
 
       <section class="section section-2">
 

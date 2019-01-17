@@ -15,6 +15,13 @@ text-decoration: none;
 color: inherit;
 }
 
+footer{
+
+background-color: rgb(190,190,190);
+color: white;
+padding: 50px 300px;
+font-size: 30px;
+}
 
 /* HEADER */
 
@@ -51,10 +58,6 @@ border-bottom: 3px solid #118cc4;
 color: white;
 }
 
-header {
-
-height: 100vh;
-}
 
 header nav ul{
 
@@ -77,9 +80,12 @@ width: 100%;
 /* MAIN */
 
 
+main {
 
 
+}
 
+main .section-1
 
 
 
@@ -97,7 +103,7 @@ width: 100%;
 
 footer{
 
-background: rgb(190,190,190);
+background-color: rgb(190,190,190);
 color: white;
 padding: 50px 300px;
 font-size: 30px;
