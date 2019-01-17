@@ -58,6 +58,11 @@
 
       <p>Retrouvez ici des témoignages, des dates de porte-ouvertes ou des adresses sur les filières et écoles qui vous intéressent</p>
 
+      <div class="acceuil-abo-bouton">
+      <a href="#"> Chercher une formation</a>
+      <a href="#"> Choisir un abonnement</a>
+      </div>
+
       </section>
 
       </main>
