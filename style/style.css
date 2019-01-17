@@ -178,8 +178,22 @@ text-align: center;
 font-size: 30px;
 cursor: pointer;
 color: #22BAE1;
-margin: 25px
+margin: 25px;
 }
+
+.voirplus:hover,
+.voirplus:active,
+.voirplus:focus{
+
+width: 100%;
+text-align: center;
+font-size: 30px;
+cursor: pointer;
+color: #22BAE1;
+margin: 25px;
+text-shadow: 0 0 5px #22BAE1;
+}
+
 
 /* MAIN INDEX.PHP*/
 
@@ -378,4 +392,112 @@ color: white;
 
 #filiere main section div h2{
 padding: 3px 15px;
+}
+
+/* ecoles . PHP */
+
+#ecole main{
+
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+#ecole .magazine-prem{
+
+margin-top: 100px;
+}
+#ecole main section{
+
+height: 150px;
+width: 1200px;
+background-image : url('../content/images/fac2.jpg');
+border-top-left-radius: 0px;
+border-top-right-radius: 35px;
+border-bottom-left-radius: 35px;
+border-bottom-right-radius: 0px;
+background-size: cover;
+position: relative;
+margin: 25px 50px;
+transition: .2s ease;
+cursor: pointer;
+}
+
+#ecole main section:hover,
+#ecole main section:focus,
+#ecole main section:active{
+
+box-shadow: 0 0 20px rgba(34, 186, 225, 1);
+}
+
+
+#ecole main section div{
+background-color: rgba(34, 186, 225, 1);
+bottom: 40px;
+position: absolute;
+font-size: 35px;
+border-radius: 35px;
+border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;
+color: white;
+}
+
+#ecole main section div h2{
+padding: 3px 15px;
+}
+
+
+/* TEMOIGNAGE .PHP */
+#temoignages main{
+
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+#temoignages .magazine-prem{
+
+margin-top: 100px;
+}
+
+#temoignages main section{
+
+display: flex;
+justify-content: space-around;
+margin: 50px 0;
+}
+
+#temoignages article,
+#temoignages aside{
+
+margin: 0 200px;
+}
+
+#temoignages main section aside{
+text-align: center;
+}
+
+#temoignages main section aside video,
+#temoignages main section aside div,{
+margin: 0;
+
+}
+
+#temoignages main section aside p{
+color: white;
+background-color: rgba(34, 186, 225, 1);
+border-bottom-left-radius: 25px;
+border-bottom-right-radius: 25px;
+font-size: 35px;
+}
+
+
+#temoignages main section article{
+font-size: 20px;
+}
+
+#temoignages main section article strong{
+font-size: 25px;
+cursor: pointer;
+color: rgba(34, 186, 225, 1);
 }
