@@ -46,6 +46,8 @@
 
       <main>
 
+      <h1> Les Témoignages </h1>
+
       <section class="temoignage-1 magazine-prem">
 
       <article>
