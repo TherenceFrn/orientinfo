@@ -23,7 +23,7 @@ padding: 50px 300px;
 font-size: 30px;
 }
 
-h1{
+main >h1{
 
 font-size: 50px;
 color: rgba(34, 186, 225, 1);
@@ -526,4 +526,59 @@ font-size: 20px;
 font-size: 25px;
 cursor: pointer;
 color: rgba(34, 186, 225, 1);
+}
+
+
+/* CONTACT . PHP */
+#contact label{
+cursor: pointer;
+}
+#contact label:hover,
+#contact label:active,
+#contact label:focus
+{
+text-decoration: underline;
+}
+
+#contact form{
+
+display: flex;
+justify-content: space-around;
+margin:150px 500px;
+}
+
+#contact form aside,
+#contact form article{
+
+display:inline-grid;
+color: rgba(34, 186, 225, 1);
+font-size: 25px;
+}
+
+#contact form label,
+#contact form input,
+#contact form select,
+#contact form textarea
+{
+
+margin: 15px 0;
+height: 50px;
+width: 500px;
+}
+
+#contact form select,
+#contact form input,
+#contact form textarea
+{
+
+font-size: 20px;
+}
+
+#contact form textarea
+{
+
+  max-width: 500px;
+  min-width: 499px;
+  min-height: 50px;
+  max-height: 100px;
 }

@@ -14,7 +14,7 @@
 
   <body>
 
-    <div id="magazine">
+    <div id="contact">
 
       <header class="header">
 
@@ -46,104 +46,56 @@
 
       <main>
 
+      <section class="section section-1">
 
-      <section class="magazine-1 magazine-prem">
+      <h2> Formulaire de contact </h2>
 
-        <div class="texte-article">
+      <h3> Si vous souhaitez nous contacter veuillez remplir ce formulaire </h3>
 
-          <h2>MyDigitalSchool</h2>
+      <form id="form_id" class="contact-form" action="contact.php" method="post">
 
-        <div>
+        <article>
 
-      </section>
+        <label class="label-form" for="prenom">Prénom</label>
+        <label class="label-form" for="nom">Nom</label>
+        <label class="label-form" for="aide-select">Sujet</label>
+        <label class="label-form" for="objet">Objet</label>
+        <label class="label-form" for="mail">e-Mail</label>
+        <label class="label-form" for="content">Contenu du mail</label>
 
-      <section class="magazine-2 magazine-prem">
+        </article>
 
-        <div class="texte-article">
+        <aside>
 
-          <h2>Fac de médecine</h2>
+        <input type="text" class="input-formulaire" id="prenom" name="prenom" placeholder="Entrez votre prénom">
 
-        <div>
+        <input type="text" class="input-formulaire" id="nom" name="nom" placeholder="Entrez votre nom">
 
-      </section>
+        <select id="aide-select">
 
-      <section class="magazine-3">
+            <option value="">Veuillez choisir :</option>
 
-        <div class="texte-article">
+            <option value="1">Aide par rapport aux abonnements</option>
 
-          <h2>ESPL</h2>
+            <option value="2">Aide à l'orientation</option>
 
-        <div>
+            <option value="3">Renseignement par rapport à une école</option>
 
-      </section>
+            <option value="3">Renseignement par rapport à une filière</option>
 
-      <section class="magazine-4">
+        </select>
 
-        <div class="texte-article">
+        <input type="text" class="input-formulaire" id="objet" name="objet" placeholder="Objet du mail">
 
-          <h2>IPAC</h2>
+        <input type="text" class="input-formulaire" id="mail" name="mail" placeholder="Votre adresse e-Mail">
 
-        <div>
+        <textarea class="input-formulaire" id='content' name="content" placeholder="Votre adresse e-Mail">
 
-      </section>
+        </textarea>
 
-      <section class="magazine-5">
+        </aside>
 
-        <div class="texte-article">
-
-          <h2>ESEO</h2>
-
-        <div>
-
-      </section>
-
-      <section class="magazine-6">
-
-        <div class="texte-article">
-
-          <h2>EPITECH</h2>
-
-        <div>
-
-      </section>
-
-      <section class="magazine-7">
-
-        <div class="texte-article">
-
-          <h2>ESA</h2>
-
-        <div>
-
-      </section>
-
-      <section class="magazine-8">
-
-        <div class="texte-article">
-
-          <h2>ESAIP</h2>
-
-        <div>
-
-      </section>
-
-      <section class="magazine-9">
-
-        <div class="texte-article">
-
-          <h2>MBWay</h2>
-
-        <div>
-
-      </section>
-
-      <section class="magazine-10">
-
-        <div class="texte-article">
-
-          <h2>Win</h2>
-
-        <div>
+      </form>
 
       </section>
 
