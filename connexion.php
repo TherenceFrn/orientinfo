@@ -24,7 +24,7 @@ session_start();
 
       echo '<fieldset>
               <legend>Connectez-vous</legend>
-                <form class="formulaire_inscr" action="connexion.php" method="post">
+                <form class="formulaire_inscr" action="verif_log.php" method="post">
                   <input type="email" placeholder="Entrez votre adresse mail" name="Email" />
                   <input type="text" name="Motdepasse" placeholder="Mot de passe"/>
                   <input type="submit" value="Se connecter">
@@ -32,16 +32,28 @@ session_start();
                 </form>
               </fieldset>';
 
-          $emailreqlof = 'SELECT * FROM utilisateur WHERE email='.$_POST["Email"];
 
-          $requete = $connexion -> prepare($emailreqlof);
+      }else{
 
-          $requete -> execute();
+        echo $_SESSION['Email'];
 
-          }
+        $emaillog = $_SESSION['Email'];
 
+        $requete = $connexion -> prepare("SELECT count(*) FROM utilisateur WHERE email='$emaillog'");
 
+        $isOK = $requete -> execute(array());
 
+        //afficher l'adresse mail
+
+        // if($isOK){
+        //   $tab_utilisateur = $requete -> fetch();
+        //   var_dump($tab_utilisateur);
+        //
+        // }
+
+      }
+
+    // session_destroy();
  ?>
 
   </body>
