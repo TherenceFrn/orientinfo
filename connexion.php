@@ -41,7 +41,10 @@ session_start();
 
         $requete = $connexion -> prepare("SELECT count(*) FROM utilisateur WHERE email='$emaillog'");
 
-        $isOK = $requete -> execute(array());
+        $isOK = $requete -> execute(array(
+
+
+        ));
 
         //afficher l'adresse mail
 

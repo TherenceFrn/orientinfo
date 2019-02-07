@@ -13,7 +13,7 @@ session_start();
   <?php
 
   $urlimage = 'image/image-1.png';
-  $date_art = date(NOW());
+  $date_art = '09,11,54,02,07,2019';
 
   $connexion = new PDO('mysql:host=localhost;dbname=orientinfo;charset=utf8', 'root', '', array(
 
@@ -37,6 +37,16 @@ session_start();
     $_POST['description'],
     $_POST['formation']
     ));
+
+    $_POST['type'] = null;
+    $_POST['filiere'] = null;
+    $_POST['ecole'] = null;
+    $_POST['auteur'] = null;
+    $_POST['duree'] = null;
+    $_POST['description'] = null;
+    $_POST['formation'] = null;
+
+    header('Location: article_new.php'); 
   }
  ?>
 

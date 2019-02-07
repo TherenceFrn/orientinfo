@@ -7,6 +7,13 @@ session_start();
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style>
+      table,thead,tbody,tr,td{
+        border: 1px solid black;
+        margin: 0;
+        padding: 0;
+        }
+    </style>
   </head>
   <body>
 
@@ -52,6 +59,134 @@ session_start();
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
     PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'",
   ));
+
+    // $requete = $connexion -> prepare("SELECT * FROM article ORDER BY id DESC");
+    //
+    // $insertart = $requete->execute(
+
+    $resultats = $connexion -> query("SELECT * FROM article ORDER BY id DESC");
+
+    $tableauresultats = $resultats -> fetchAll();
+
+    echo "<fieldset><table><thead><td>id</td><td>type</td><td>filiere</td><td>ecole</td><td>date_art</td><td>auteur</td><td>image</td><td>duree</td><td>description</td><td>formation</td></thead><tbody>";
+
+    foreach ($tableauresultats as $ligne) {
+
+    echo "<tr><td>".$ligne -> id."</td>";
+
+    echo "<td>".$ligne -> type."</td>";
+
+    echo "<td>".$ligne -> filiere."</td>";
+
+    echo "<td>".$ligne -> ecole."</td>";
+
+    echo "<td>".$ligne -> date_art."</td>";
+
+    echo "<td>".$ligne -> auteur."</td>";
+
+    echo "<td>".$ligne -> image."</td>";
+
+    echo "<td>".$ligne -> duree."</td>";
+
+    echo "<td>".$ligne -> description."</td>";
+
+    echo "<td>".$ligne -> formation."</td></tr>";
+
+    };
+
+    echo "</tbody></table>";
+
+    $resultats = $connexion -> query("SELECT * FROM article WHERE type='filiere' ORDER BY id DESC ");
+
+    $tableauresultats = $resultats -> fetchAll();
+
+    echo "<h1>Les Filieres</h1><table><thead><td>id</td><td>filiere</td><td>ecole</td><td>date_art</td><td>auteur</td><td>image</td><td>duree</td><td>description</td><td>formation</td></thead><tbody>";
+
+    foreach ($tableauresultats as $ligne) {
+
+    echo "<tr><td>".$ligne -> id."</td>";
+
+    echo "<td>".$ligne -> filiere."</td>";
+
+    echo "<td>".$ligne -> ecole."</td>";
+
+    echo "<td>".$ligne -> date_art."</td>";
+
+    echo "<td>".$ligne -> auteur."</td>";
+
+    echo "<td>".$ligne -> image."</td>";
+
+    echo "<td>".$ligne -> duree."</td>";
+
+    echo "<td>".$ligne -> description."</td>";
+
+    echo "<td>".$ligne -> formation."</td></tr>";
+
+    };
+
+    echo "</tbody></table>";
+
+    $resultats = $connexion -> query("SELECT * FROM article WHERE type='ecole' ORDER BY id DESC ");
+
+    $tableauresultats = $resultats -> fetchAll();
+
+    echo "<h1>Les Ecoles</h1><table><thead><td>id</td><td>filiere</td><td>ecole</td><td>date_art</td><td>auteur</td><td>image</td><td>duree</td><td>description</td><td>formation</td></thead><tbody>";
+
+    foreach ($tableauresultats as $ligne) {
+
+    echo "<tr><td>".$ligne -> id."</td>";
+
+    echo "<td>".$ligne -> filiere."</td>";
+
+    echo "<td>".$ligne -> ecole."</td>";
+
+    echo "<td>".$ligne -> date_art."</td>";
+
+    echo "<td>".$ligne -> auteur."</td>";
+
+    echo "<td>".$ligne -> image."</td>";
+
+    echo "<td>".$ligne -> duree."</td>";
+
+    echo "<td>".$ligne -> description."</td>";
+
+    echo "<td>".$ligne -> formation."</td></tr>";
+
+    };
+
+    echo "</tbody></table>";
+
+    $resultats = $connexion -> query("SELECT * FROM article WHERE type='temoignage' ORDER BY id DESC ");
+
+    $tableauresultats = $resultats -> fetchAll();
+
+    echo "<h1>Les Temoignages</h1><table><thead><td>id</td><td>filiere</td><td>ecole</td><td>date_art</td><td>auteur</td><td>image</td><td>duree</td><td>description</td><td>formation</td></thead><tbody>";
+
+    foreach ($tableauresultats as $ligne) {
+
+    echo "<tr><td>".$ligne -> id."</td>";
+
+    echo "<td>".$ligne -> filiere."</td>";
+
+    echo "<td>".$ligne -> ecole."</td>";
+
+    echo "<td>".$ligne -> date_art."</td>";
+
+    echo "<td>".$ligne -> auteur."</td>";
+
+    echo "<td>".$ligne -> image."</td>";
+
+    echo "<td>".$ligne -> duree."</td>";
+
+    echo "<td>".$ligne -> description."</td>";
+
+    echo "<td>".$ligne -> formation."</td></tr>";
+
+    };
+
+    echo "</tbody></table>";
+
+    echo "</fieldset>";
 
  ?>
 
