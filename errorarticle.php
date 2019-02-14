@@ -14,7 +14,7 @@
 
   <body>
 
-    <div id="magazine">
+    <div id="filiere">
 
       <header class="header">
 
@@ -30,7 +30,7 @@
 
           <li class="navigation-bouton"><a href="ecole.php">Les Ecoles</a></li>
 
-          <li class="navigation-bouton"><a href="#temoignages.php">Temoignages</a></li>
+          <li class="navigation-bouton"><a href="temoignages.php">Temoignages</a></li>
 
           <li class="navigation-bouton"><a href="contact.php">Contact</a></li>
 
@@ -46,34 +46,9 @@
 
       <main>
 
-        <?php
-        $connexion = new PDO('mysql:host=localhost;dbname=orientinfo;charset=utf8', 'root', '', array(
-          PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-          PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
-          PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'",
-        ));
-        $resultats = $connexion -> query("SELECT * FROM article ORDER BY id DESC LIMIT 10");
-        $tableauresultats = $resultats -> fetchAll();
-        foreach ($tableauresultats as $ligne) {
-        echo '<section class="magazine-1" title="'.$ligne -> type.'"><h3>'.$ligne -> type.'</h3><div class="texte-article">';
+        <h1>ARTICLE NON TROUVE</h1>
 
-        echo "<h2>".$ligne -> filiere."</h2>";
-        echo '</section>';
-        };
-        ?>
-
-        <a class="voirplus"> Voir + </a>
-
-        <?php
-        $resultats = $connexion -> query("SELECT * FROM article ORDER BY id DESC LIMIT 10 OFFSET 10");
-        $tableauresultats = $resultats -> fetchAll();
-        foreach ($tableauresultats as $ligne) {
-        echo '<section class="magazine-2 hidden" title="'.$ligne -> type.'"><h3>'.$ligne -> type.'</h3><div class="texte-article">';
-
-        echo "<h2>".$ligne -> filiere."</h2>";
-        echo '</section>';
-        };
-        ?>
+        <h2>Retounez a l'acceuil en cliquant <a href="index.php">ICI</a></h2>
 
       </main>
 

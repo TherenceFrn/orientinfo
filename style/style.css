@@ -337,6 +337,18 @@ cursor: pointer;
 box-shadow: 0 0 20px rgba(34, 186, 225, 1);
 }
 
+#magazine main section h3{
+
+  color: white;
+  top: 0;
+  position: absolute;
+  font-size: 35px;
+  border-radius: 35px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  background-color: rgba(34, 186, 225, 1);
+  padding: 3px 10px
+}
 
 #magazine main section div{
 background-color: rgba(34, 186, 225, 1);
@@ -402,6 +414,10 @@ color: white;
 
 #filiere main section div h2{
 padding: 3px 15px;
+}
+
+#filiere main a:first-child{
+margin-top: 75px;
 }
 
 /* ecoles . PHP */
@@ -477,6 +493,8 @@ justify-content: space-around;
 margin: 50px 200px;
 border: 2px solid rgba(34, 186, 225, 1);
 border-radius: 35px;
+max-width: 65vw;
+min-width: 64vw
 }
 
 #temoignages main section:hover,

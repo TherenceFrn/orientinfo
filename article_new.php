@@ -8,16 +8,25 @@ session_start();
     <meta charset="utf-8">
     <title></title>
     <style>
-      table,thead,tbody,tr,td{
+      table{
         border: 1px solid black;
         margin: 0;
         padding: 0;
         }
+      td{
+          border-bottom: 1px solid black;
+        }
+      tr:last-child td{
+          border-bottom: 1px solid white;
+        }
+      fieldset{
+          display: block;
+      }
     </style>
   </head>
   <body>
 
-  <fieldset class="">
+  <fieldset>
   <legend>Nouvel article</legend>
   <form id="form_id" class="" action="article_new_trait.php" method="post">
 

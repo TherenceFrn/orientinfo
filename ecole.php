@@ -46,117 +46,32 @@
 
       <main>
 
+    <?php
 
-      <section class="magazine-1 magazine-prem">
+    $connexion = new PDO('mysql:host=localhost;dbname=orientinfo;charset=utf8', 'root', '', array(
 
-        <div class="texte-article">
+      PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+      PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
+      PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'",
+    ));
 
-          <h2>Fac de médecine</h2>
+    $resultats = $connexion -> query("SELECT * FROM article WHERE type='ecole' ORDER BY id DESC LIMIT 10");
 
-        <div>
+    $tableauresultats = $resultats -> fetchAll();
 
-      </section>
+    foreach ($tableauresultats as $ligne) {
 
-      <section class="magazine-2">
+    echo "<a href='errorarticle.php'>";
 
-        <div class="texte-article">
+    echo "<section class='magazine'><div class='texte-article'>";
 
-          <h2>Fac de médecine</h2>
+    echo "<h2>".$ligne -> ecole."</h2>";
 
-        <div>
+    echo "</div></section></a>";
 
-      </section>
+    };
 
-      <section class="magazine-3">
-
-        <div class="texte-article">
-
-          <h2>ESPL</h2>
-
-        <div>
-
-      </section>
-
-      <section class="magazine-4">
-
-        <div class="texte-article">
-
-          <h2>IPAC</h2>
-
-        <div>
-
-      </section>
-
-      <section class="magazine-5">
-
-        <div class="texte-article">
-
-          <h2>ESEO</h2>
-
-        <div>
-
-      </section>
-
-      <section class="magazine-6">
-
-        <div class="texte-article">
-
-          <h2>EPITECH</h2>
-
-        <div>
-
-      </section>
-
-      <section class="magazine-7">
-
-        <div class="texte-article">
-
-          <h2>ESA</h2>
-
-        <div>
-
-      </section>
-
-      <section class="magazine-8">
-
-        <div class="texte-article">
-
-          <h2>ESAIP</h2>
-
-        <div>
-
-      </section>
-
-      <section class="magazine-9">
-
-        <div class="texte-article">
-
-          <h2>MBWay</h2>
-
-        <div>
-
-      </section>
-
-      <section class="magazine-10">
-
-        <div class="texte-article">
-
-          <h2>Win</h2>
-
-        <div>
-
-      </section>
-
-
-
-
-
-          <a class="voirplus"> Voir + </a>
-
-
-
-
-
+    ?>
 
       </main>
 
