@@ -30,7 +30,7 @@
 
           <li class="navigation-bouton"><a href="ecole.php">Les Ecoles</a></li>
 
-          <li class="navigation-bouton"><a href="#temoignages.php">Temoignages</a></li>
+          <li class="navigation-bouton"><a href="temoignages.php">Temoignages</a></li>
 
           <li class="navigation-bouton"><a href="contact.php">Contact</a></li>
 

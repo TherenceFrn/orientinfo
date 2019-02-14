@@ -9,6 +9,9 @@ session_start();
     <title></title>
   </head>
   <body>
+  <form id="form_id" class="" action="destroysession.php" method="post">
+    <button type="submit" value="">Supprimer la session</button>
+  </form>
 
   <?php
 
@@ -36,7 +39,9 @@ session_start();
 
       $emaillog = $_SESSION['Email'];
 
-      $requete = $connexion -> prepare("SELECT COUNT(*) as countid FROM utilisateur WHERE email='$emaillog'");
+      $prereq = "SELECT COUNT(*) as countid FROM utilisateur WHERE email='$emaillog'";
+
+      $requete = $connexion -> prepare($prereq);
 
       // $isOK = $requete -> execute(array());
 
@@ -61,12 +66,12 @@ session_start();
       //SI L'EMAIL EST ENREGISTRE
 
       }else{
-      //SI L'EMAIL N'EXISTE PASSE
+      //SI L'EMAIL N'EXISTE PAS
       ?><script>alert('Vérifiez votre adresse mail');</script><?php
 
       }
 
-    }
+      }
 
 
 
