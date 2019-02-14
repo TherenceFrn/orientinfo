@@ -310,10 +310,13 @@ display: flex;
 flex-wrap: wrap;
 justify-content: center;
 }
-#magazine .magazine-prem{
+#magazine main section:first-child,
+#magazine main section:nth-child(2)
+{
 
 margin-top: 100px;
 }
+
 #magazine main section{
 
 height: 350px;

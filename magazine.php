@@ -60,9 +60,9 @@
         echo "<h2>".$ligne -> filiere."</h2>";
         echo '</section>';
         };
+        echo '<a id="voirplusmagazine" class="voirplus"> Voir + </a>';
         ?>
 
-        <a class="voirplus"> Voir + </a>
 
         <?php
         $resultats = $connexion -> query("SELECT * FROM article ORDER BY id DESC LIMIT 10 OFFSET 10");
@@ -73,6 +73,7 @@
         echo "<h2>".$ligne -> filiere."</h2>";
         echo '</section>';
         };
+
         ?>
 
       </main>
