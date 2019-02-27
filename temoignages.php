@@ -36,7 +36,12 @@
 
           <li class="navigation-bouton"><a href="contact.php">Contact</a></li>
 
-          <li class="navigation-bouton"><a href="<?php echo "profil.php?id=".$_SESSION['id']; ?>">Profil</a></li>
+          <li class="navigation-bouton"><a href="<?php
+            if(isset($_SESSION['id']))
+              {echo "profil.php?id=".$_SESSION['id'];
+            }else{echo "profil.php";
+          } ?>">Profil</a></li>
+
 
         </ul>
 

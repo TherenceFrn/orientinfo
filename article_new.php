@@ -115,6 +115,41 @@ header('Location: connexion.php');
 
     echo "</tbody></table>";
 
+
+    // $resultats = $connexion -> query("SELECT * FROM article WHERE type='filiere' ORDER BY id DESC ");
+
+    $requete = $connexion->prepare("SELECT * FROM article WHERE auteur=? ORDER BY id DESC ");
+
+    $requete->execute(array($_SESSION["Prenom"]));
+
+    $tableauresultats = $requete -> fetchAll();
+
+    echo "<h1> Auteur connecté : ".$_SESSION['Prenom']."</h1><table><thead><td>id</td><td>filiere</td><td>ecole</td><td>date_art</td><td>auteur</td><td>image</td><td>duree</td><td>description</td><td>formation</td></thead><tbody>";
+
+    foreach ($tableauresultats as $ligne) {
+
+    echo "<tr><td>".$ligne -> id."</td>";
+
+    echo "<td>".$ligne -> filiere."</td>";
+
+    echo "<td>".$ligne -> ecole."</td>";
+
+    echo "<td>".$ligne -> date_art."</td>";
+
+    echo "<td>".$ligne -> auteur."</td>";
+
+    echo "<td>".$ligne -> image."</td>";
+
+    echo "<td>".$ligne -> duree."</td>";
+
+    echo "<td>".$ligne -> description."</td>";
+
+    echo "<td>".$ligne -> formation."</td></tr>";
+
+    };
+
+    echo "</tbody></table>";
+
     $resultats = $connexion -> query("SELECT * FROM article WHERE type='filiere' ORDER BY id DESC ");
 
     $tableauresultats = $resultats -> fetchAll();
