@@ -31,7 +31,7 @@ session_start();
     $_POST['filiere'],
     $_POST['ecole'],
     $date_art,
-    $_POST['auteur'],
+    $_SESSION['Prenom'],
     $urlimage,
     $_POST['duree'],
     $_POST['description'],
@@ -46,7 +46,7 @@ session_start();
     $_POST['description'] = null;
     $_POST['formation'] = null;
 
-    header('Location: article_new.php'); 
+    header('Location: article_new.php');
   }
  ?>
 

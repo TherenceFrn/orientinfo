@@ -272,6 +272,7 @@ font-size: 30px;
 }
 
 #index main .section-2 .acceuil-abo-bouton{
+align-items: center;
 margin-top: 25px;
 display: flex;
 justify-content: space-around;
@@ -363,6 +364,10 @@ color: white;
 
 #magazine main section div h2{
 padding: 3px 15px;
+}
+
+#magazine main section>h3{
+text-transform: capitalize;
 }
 
 /* FILIERE . PHP */

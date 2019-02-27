@@ -1,6 +1,11 @@
 <?php
 
 session_start();
+if(!isset($_SESSION['Prenom'])){
+header('Location: connexion.php');
+}else{
+
+}
  ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
@@ -25,6 +30,12 @@ session_start();
     </style>
   </head>
   <body>
+  <fieldset>
+  <legend>Menu</legend>
+  <a href="<?php echo "profil.php?id=".$_SESSION['id'];?>">Profil</a>
+  <a href="deconnexion.php">Deconnexion</a>
+  <a href="magazine.php">Magazine</a>
+  </fieldset>
 
   <fieldset>
   <legend>Nouvel article</legend>
@@ -38,7 +49,6 @@ session_start();
   <input type="text" name="formation" placeholder="Nom de la formation">
   <input type="text" name="filiere" placeholder="Filiere">
   <input type="text" name="ecole" placeholder="Ecole">
-  <input type="text" name="auteur" placeholder="Auteur">
   <input type="file">
   <label class="" for="duree">Choisir une durée</label>
   <select name="duree">

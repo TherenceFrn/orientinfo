@@ -1,7 +1,6 @@
-<?php
+<?php session_start(); ?>
 
-session_start();
- ?>
+
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
@@ -9,10 +8,42 @@ session_start();
     <title></title>
   </head>
   <body>
+    <form class="formulaire_inscr" action="" method="post">
+    <h3>Connexion</h3>
+      <table>
+        <tr>
+          <td>
+            <label for="emailCo">E-Mail:</label>
+          </td>
+          <td>
+            <input type="email" placeholder="EMail" name="EmailCo" id="emailCo">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="mdpCo">Mot de passe</label>
+          </td>
+          <td>
+            <input type="password" placeholder="Mot de passe" name="MdpCo" id="mdpCo">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="submit" value="Se connecter" name="formCo">
+          </td>
+          <td>
+            <input type="reset" value="Reinitialiser les valeurs">
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2>
+            <a href="index.php">Acceuil</a>
+          </td>
+        </tr>
+      </table>
+    </form>
 
   <?php
-
-
   $connexion = new PDO('mysql:host=localhost;dbname=orientinfo;charset=utf8', 'root', '', array(
 
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -20,44 +51,39 @@ session_start();
     PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'",
   ));
 
-    if(!isset($_SESSION['Motdepasse']) || !isset($_SESSION['Email'])){
+  if(isset($_POST['formCo'])){
 
-      echo '<fieldset>
-              <legend>Connectez-vous</legend>
-                <form class="formulaire_inscr" action="verif_log.php" method="post">
-                  <input type="email" placeholder="Entrez votre adresse mail" name="Email" />
-                  <input type="text" name="Motdepasse" placeholder="Mot de passe"/>
-                  <input type="submit" value="Se connecter">
-                  <a href="inscription.php"><input type="button" value="S\'inscrire"></a>
-                </form>
-              </fieldset>';
+    $emailCo = htmlspecialchars($_POST['EmailCo']);
+    $mdpCo = sha1($_POST['MdpCo']);
 
+      if(!empty($emailCo) AND !empty($mdpCo)){
+
+        $requser = $connexion->prepare("SELECT * FROM membres WHERE mail=? AND motdepasse=?");
+        $requser->execute(array($emailCo, $mdpCo));
+        $userexist = $requser->rowCount();
+          if($userexist == 1){
+
+            $userinfo = $requser->fetch();
+            $_SESSION['id']=$userinfo->id;
+            $_SESSION['Prenom']=$userinfo->prenom;
+            $_SESSION['Nom']=$userinfo->nom;
+            $_SESSION['Email']=$userinfo->mail;
+            header("Location: profil.php?id=".$_SESSION['id']);
+          }else {
+            $erreur = 'Mauvais ID';
+          }
 
       }else{
-
-        echo $_SESSION['Email'];
-
-        $emaillog = $_SESSION['Email'];
-
-        $requete = $connexion -> prepare("SELECT count(*) FROM utilisateur WHERE email='$emaillog'");
-
-        $isOK = $requete -> execute(array(
-
-
-        ));
-
-        //afficher l'adresse mail
-
-        // if($isOK){
-        //   $tab_utilisateur = $requete -> fetch();
-        //   var_dump($tab_utilisateur);
-        //
-        // }
-
+        $erreur = "Tous les champs doivent être complétés";
       }
+  }
 
-    // session_destroy();
+  // Affiche le message d'erreur
+  if(isset($erreur)){
+  echo $erreur;
+  }
+
+
  ?>
-
   </body>
 </html>

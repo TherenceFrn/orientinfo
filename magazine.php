@@ -1,3 +1,6 @@
+<?php session_start();
+?>
+
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr">
@@ -36,7 +39,7 @@
 
           <li class="navigation-bouton"><a href="etude.php">Etudes</a></li>
 
-          <li class="navigation-bouton"><a href="profil.php">Profil</a></li>
+          <li class="navigation-bouton"><a href="<?php echo "profil.php?id=".$_SESSION['id']; ?>">Profil</a></li>
 
         </ul>
 

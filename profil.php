@@ -1,7 +1,21 @@
-<?php
+<?php session_start();
 
-session_start();
- ?>
+$connexion = new PDO('mysql:host=localhost;dbname=orientinfo;charset=utf8', 'root', '', array(
+  PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+  PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
+  PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'",
+));
+
+if(isset($_GET['id']) AND $_GET['id'] > 0){
+
+  $getid = intval($_GET['id']);
+  $requser = $connexion->prepare('SELECT * FROM membres WHERE id=?');
+  $requser->execute(array($getid));
+
+  $userinfo = $requser->fetch();
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
@@ -9,60 +23,28 @@ session_start();
     <title></title>
   </head>
   <body>
-    <form id="form_id" class="" action="destroysession.php" method="post">
-    <button type="submit" value="">Supprimer la session</button>
-    </form>
+  <h2>Profil de <?php echo $userinfo->prenom; echo " "; echo $userinfo->nom; ?></h2>
+  <h3>Nom : <?php echo $userinfo->nom; ?></h3>
+  <h3>Prenom : <?php echo $userinfo->prenom; ?></h3>
+  <h3>E-Mail : <?php echo $userinfo->mail; ?></h3>
+  <h3>Mot de passe : <?php echo $userinfo->motdepasse; ?></h3>
 
   <?php
 
-
-  $connexion = new PDO('mysql:host=localhost;dbname=orientinfo;charset=utf8', 'root', '', array(
-
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
-    PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'",
-  ));
-
-    if(!isset($_SESSION['Motdepasse']) || !isset($_SESSION['Email'])){
-
-      echo '<fieldset>
-              <legend>Connectez-vous</legend>
-                <form class="formulaire_inscr" action="verif_log.php" method="post">
-                  <input type="email" placeholder="Entrez votre adresse mail" name="Email" />
-                  <input type="text" name="Motdepasse" placeholder="Mot de passe"/>
-                  <input type="submit" value="Se connecter">
-                  <a href="inscription.php"><input type="button" value="S\'inscrire"></a>
-                </form>
-              </fieldset>';
-
-
-      }else{
-
-        echo $_SESSION['Email'];
-
-        $emaillog = $_SESSION['Email'];
-
-        $prereq = "SELECT count(*) FROM utilisateur WHERE email='$emaillog'";
-
-        $requete = $connexion -> prepare($prereq);
-
-        $isOK = $requete -> execute(array(
-
-
-        ));
-
-        //afficher l'adresse mail
-
-        // if($isOK){
-        //   $tab_utilisateur = $requete -> fetch();
-        //   var_dump($tab_utilisateur);
-        //
-        // }
-
-      }
-
-    // session_destroy();
+  if(isset($_SESSION['id']) AND $userinfo->id == $_SESSION['id']){
+  ?>
+  <a href="#">Editer mon profil</a>
+  <a href="deconnexion.php">Se deconnecter</a>
+  <a href="article_new.php">Ecrire un article</a>
+  <a href="index.php">Acceuil</a>
+  <?php
+  }
  ?>
-
   </body>
 </html>
+<?php
+}else {
+
+header('Location: connexion.php');
+}
+ ?>
